@@ -1,7 +1,12 @@
-#!/bin/bash -e
-set -o pipefail
+#!/bin/bash
 
-wget https://raw.githubusercontent.com/pexcn/daily/gh-pages/chnroute/chnroute.txt -nv -O files/chnroute.txt
-wget https://raw.githubusercontent.com/pexcn/daily/gh-pages/chnroute/chnroute-v6.txt -nv -O files/chnroute6.txt
-wget https://raw.githubusercontent.com/pexcn/daily/gh-pages/gfwlist/gfwlist.txt -nv -O files/gfwlist.txt
-wget https://raw.githubusercontent.com/pexcn/daily/gh-pages/chinalist/chinalist.txt -nv -O files/chinalist.txt
+cd files
+echo -e "正在更新chinalist...\c"
+./update-chinalist.sh
+echo -e "done\n正在更新chnroute...\c"
+./update-chnroute.sh
+echo -e "done\n正在更新chnroute6...\c"
+./update-chnroute6.sh
+echo -e "done\n正在更新gfwlist...\c"
+./update-gfwlist.sh
+echo "done"

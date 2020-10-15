@@ -42,6 +42,7 @@ define Package/chinadns-ng/conffiles
 /etc/chinadns-ng/update-chnroute6.sh
 /etc/chinadns-ng/update-gfwlist.sh
 /etc/chinadns-ng/update-chinalist.sh
+/etc/chinadns-ng/synctopwl.sh
 endef
 
 define Package/chinadns-ng/install
@@ -60,6 +61,7 @@ define Package/chinadns-ng/install
 	$(INSTALL_DATA) files/update-chnroute6.sh $(1)/etc/chinadns-ng
 	$(INSTALL_DATA) files/update-gfwlist.sh $(1)/etc/chinadns-ng
 	$(INSTALL_DATA) files/update-chinalist.sh $(1)/etc/chinadns-ng
+	$(INSTALL_DATA) files/synctopwl.sh $(1)/etc/chinadns-ng
 endef
 
 define Package/chinadns-ng/postrm
