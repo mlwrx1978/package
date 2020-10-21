@@ -92,7 +92,15 @@ filters:
   name: tvbox
   id: 1575018007
 whitelist_filters: []
-user_rules: []
+user_rules:
+- '@@||jd.com^'
+- '@@||etao.com^'
+- '@@||tongdun.net^'
+- '@@||taobao.com^'
+- '@@ii.gdt.qq.com^$important'
+- '@@||toutiao.com^'
+- '@@||alipay.com^'
+- '@@||bilibili.com^'
 dhcp:
   enabled: false
   interface_name: ""
