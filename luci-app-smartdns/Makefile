@@ -24,3 +24,14 @@ endef
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
+
+define Package/$(PKG_NAME)/postinst
+#!/bin/sh
+	/etc/init.d/smartdns enable >/dev/null 2>&1
+	enable=$(uci get smartdns.@smartdns[0].enabled 2>/dev/null)
+	if [ "$enable" == "1" ]; then
+		/etc/init.d/smartdns reload
+	fi
+	
+exit 0
+endef
