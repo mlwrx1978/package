@@ -10,8 +10,8 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=AdGuardHome
 PROJECT_NAME:=AdGuardHome
-PKG_VERSION:=v0.104.1
-PKG_RELEASE:=20201116
+PKG_VERSION:=v0.104.3
+PKG_RELEASE:=20201121
 
 include $(INCLUDE_DIR)/package.mk
 
