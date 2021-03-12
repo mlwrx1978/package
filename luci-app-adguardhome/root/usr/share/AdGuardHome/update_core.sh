@@ -27,7 +27,7 @@ check_latest_version(){
 	if [ -z "${latest_ver}" ]; then
 		echo -e "\nFailed to check latest version, please try again later."  && EXIT 1
 	fi
-	now_ver="$($binpath --version 2>/dev/null | awk '{print "v"$4}'|sed 's/,//')"
+	now_ver="$($binpath --version 2>/dev/null | awk '{print $4}'|sed 's/,//')"
 	if [ "${latest_ver}"x != "${now_ver}"x ] || [ "$1" == "force" ]; then
 		echo -e "Local version: ${now_ver}., cloud version: ${latest_ver}." 
 		doupdate_core
