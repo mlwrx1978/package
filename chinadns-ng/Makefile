@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=chinadns-ng
 PKG_VERSION:=1.0-beta.24
-PKG_RELEASE:=20210412
+PKG_RELEASE:=202104
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/zfl9/chinadns-ng.git
